@@ -49,6 +49,7 @@ public class PlayerShip : SpaceShip
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Obstacle"))
         {
+            Destroy(gameObject);
             GameManager.instance.GameOver();
         }
     }

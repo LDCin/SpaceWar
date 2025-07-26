@@ -30,8 +30,10 @@ public class SpaceShip : MonoBehaviour, IDamagable
         _currentHealthPoint -= enemyDamage;
         if (_currentHealthPoint <= 0)
         {
+            Destroy(gameObject);
             GameManager.instance.GameOver();
             Debug.Log("Game Over!");
         }
+        Debug.Log("Take Damage!");
     }
 }
